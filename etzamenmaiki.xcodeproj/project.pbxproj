@@ -14,7 +14,6 @@
 		C90E655B2A0EFE9900FB0674 /* ProductoViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E65592A0EFE9900FB0674 /* ProductoViewModels.swift */; };
 		C90E655C2A0EFE9900FB0674 /* ProductosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E655A2A0EFE9900FB0674 /* ProductosViewModel.swift */; };
 		C90E655F2A0EFEEB00FB0674 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90E655E2A0EFEEB00FB0674 /* Producto.swift */; };
-		C971965129FC81CC00DEB3A5 /* AppTaruls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965029FC81CC00DEB3A5 /* AppTaruls.swift */; };
 		C971965329FC879A00DEB3A5 /* AppSicreTeisfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */; };
 		C971965529FC884F00DEB3A5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965429FC884F00DEB3A5 /* Menu.swift */; };
 		C971965729FC8A3600DEB3A5 /* Yuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965629FC8A3600DEB3A5 /* Yuser.swift */; };
@@ -25,6 +24,7 @@
 		C9E14F8029F59A6A00FEE27E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E14F7F29F59A6A00FEE27E /* Preview Assets.xcassets */; };
 		C9E14F8B29F59CA300FEE27E /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E14F8A29F59CA300FEE27E /* AppButton.swift */; };
 		C9E14F8D29F59D1700FEE27E /* AppTeisfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */; };
+		C9EAB6472A11D99700B740B1 /* AppTaruls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EAB6462A11D99700B740B1 /* AppTaruls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,6 @@
 		C90E65592A0EFE9900FB0674 /* ProductoViewModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductoViewModels.swift; sourceTree = "<group>"; };
 		C90E655A2A0EFE9900FB0674 /* ProductosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductosViewModel.swift; sourceTree = "<group>"; };
 		C90E655E2A0EFEEB00FB0674 /* Producto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
-		C971965029FC81CC00DEB3A5 /* AppTaruls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppTaruls.swift; path = ../../../../Downloads/AppTaruls.swift; sourceTree = "<group>"; };
 		C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSicreTeisfil.swift; sourceTree = "<group>"; };
 		C971965429FC884F00DEB3A5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C971965629FC8A3600DEB3A5 /* Yuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yuser.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		C9E14F7F29F59A6A00FEE27E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9E14F8A29F59CA300FEE27E /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTeisfil.swift; sourceTree = "<group>"; };
+		C9EAB6462A11D99700B740B1 /* AppTaruls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTaruls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +87,7 @@
 		C9E14F6C29F59A6800FEE27E = {
 			isa = PBXGroup;
 			children = (
+				C9EAB6462A11D99700B740B1 /* AppTaruls.swift */,
 				C9E14F7729F59A6800FEE27E /* etzamenmaiki */,
 				C9E14F7629F59A6800FEE27E /* Products */,
 			);
@@ -114,7 +115,6 @@
 				C971965629FC8A3600DEB3A5 /* Yuser.swift */,
 				C971965829FC900E00DEB3A5 /* Produtz.swift */,
 				C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */,
-				C971965029FC81CC00DEB3A5 /* AppTaruls.swift */,
 				C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */,
 				C9E14F7C29F59A6A00FEE27E /* Assets.xcassets */,
 				C9E14F7E29F59A6A00FEE27E /* Preview Content */,
@@ -215,7 +215,7 @@
 				C971965929FC900E00DEB3A5 /* Produtz.swift in Sources */,
 				C971965529FC884F00DEB3A5 /* Menu.swift in Sources */,
 				C90E655C2A0EFE9900FB0674 /* ProductosViewModel.swift in Sources */,
-				C971965129FC81CC00DEB3A5 /* AppTaruls.swift in Sources */,
+				C9EAB6472A11D99700B740B1 /* AppTaruls.swift in Sources */,
 				C90E655B2A0EFE9900FB0674 /* ProductoViewModels.swift in Sources */,
 				C9E14F7B29F59A6800FEE27E /* ContentView.swift in Sources */,
 				C9E14F7929F59A6800FEE27E /* etzamenmaikiApp.swift in Sources */,
