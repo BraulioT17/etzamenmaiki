@@ -8,23 +8,54 @@
 import SwiftUI
 
 struct Menu: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
+    @State var buttonClickReg = false
+    @State var buttonClickSal = false
+    @State var buttonClickPur = false
     var body: some View {
-        ZStack{
-            
-            VStack{
-                
-                VStack{}.frame(height: CGFloat(25))
-    
-                AppTaruls(title: "Menu")
+        NavigationStack{
+            ZStack{
 
-
-            }.frame(maxHeight: .infinity,alignment: .topTrailing)
-            VStack (spacing:50){
-                AppButton(title: "Register", onClick: {})
-                AppButton(title: "Sales",onClick: {})
-                AppButton(title: "Purchase",onClick: {})
                 
-            }.frame(maxHeight: .infinity)}.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:1,green:0.88,blue:0.88,opacity: 1))
+                VStack{
+                    
+                    
+                    VStack{}.frame(height: CGFloat(25))
+                    
+                    AppTaruls(title: "Menu")
+                    
+                    
+                }.frame(maxHeight: .infinity,alignment: .topTrailing)
+  
+                VStack (spacing:50){
+                    
+                    Image(systemName: "menucard.fill").font(.system(size: 90.0))
+                    AppButton(title: "Register", onClick: {
+                        buttonClickReg = true
+                    })
+                    AppButton(title: "Sales",onClick: {
+                        buttonClickSal = true
+                    })
+                    AppButton(title: "Purchase",onClick: {
+                        buttonClickPur = true
+                    })
+                    
+                }.frame(maxHeight: .infinity)
+                
+                NavigationLink(destination: RegisterPlus(), isActive: $buttonClickReg, label: {EmptyView()})
+                NavigationLink(destination: Sales(), isActive: $buttonClickSal, label: {EmptyView()})
+                NavigationLink(destination: Purchase(), isActive: $buttonClickPur, label: {EmptyView()})
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarLeading){
+                            Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "house").foregroundColor(Color.red).font(.system(size: 22))})
+                        }
+                    })
+                
+            }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:1,green:0.88,blue:0.88,opacity: 1))
+
+        }
     }
 }
 

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var buttonClick = false
+    @State var buttonClickLog = false
     var body: some View {
-        NavigationView{
+        NavigationStack{
             ZStack{
+                
                 
                 VStack{
                     
@@ -24,21 +25,21 @@ struct ContentView: View {
                 VStack (spacing:20){
                     AppTaruls(title: "User")
                     
-                    AppTeisfil(hint: "Usuario")
+                    Textfield2(hint: "Usuario")
                     AppTaruls(title: "Password")
-                    AppSicreTeisfil(hint: "Password")
+                    PassTextFiel(hint: "Password")
+                    VStack{}.frame(height: CGFloat(20))
                     AppButton(title: "Log in", onClick: {
-                        print(buttonClick)
-                        buttonClick = true
-                        print(buttonClick)
-                        //NavigationLink
+                        buttonClickLog = true
                     })
                     
                     
                 }.frame(maxHeight: .infinity)
                 
-                NavigationLink(destination: Menu(), isActive: $buttonClick, label: {EmptyView()})
+                NavigationLink(destination: Menu(), isActive: $buttonClickLog, label: {EmptyView()}).toolbarRole(.editor)
+                
             }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:1,green:0.88,blue:0.88,opacity: 1))
+                
             
         }
         

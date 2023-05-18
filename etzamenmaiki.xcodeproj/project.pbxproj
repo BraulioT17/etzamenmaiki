@@ -18,6 +18,16 @@
 		C971965529FC884F00DEB3A5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965429FC884F00DEB3A5 /* Menu.swift */; };
 		C971965729FC8A3600DEB3A5 /* Yuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965629FC8A3600DEB3A5 /* Yuser.swift */; };
 		C971965929FC900E00DEB3A5 /* Produtz.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965829FC900E00DEB3A5 /* Produtz.swift */; };
+		C9CE6B662A1588210026003B /* ListaProd.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE6B652A1588210026003B /* ListaProd.swift */; };
+		C9CE6B682A1588350026003B /* ListaSal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE6B672A1588350026003B /* ListaSal.swift */; };
+		C9CE6B6A2A15884A0026003B /* ListaPur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CE6B692A15884A0026003B /* ListaPur.swift */; };
+		C9CFF7D62A15924D00080D6C /* ListaUsr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFF7D52A15924D00080D6C /* ListaUsr.swift */; };
+		C9D98D492A153AE8008A74DD /* Sales.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D482A153AE8008A74DD /* Sales.swift */; };
+		C9D98D4B2A153AFB008A74DD /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D4A2A153AFB008A74DD /* Purchase.swift */; };
+		C9D98D4D2A153C59008A74DD /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D4C2A153C59008A74DD /* AppLabel.swift */; };
+		C9D98D4F2A154089008A74DD /* Textfield2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D4E2A154089008A74DD /* Textfield2.swift */; };
+		C9D98D512A154508008A74DD /* PassTextFiel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D502A154508008A74DD /* PassTextFiel.swift */; };
+		C9D98D532A154D39008A74DD /* RegisterPlus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D98D522A154D39008A74DD /* RegisterPlus.swift */; };
 		C9E14F7929F59A6800FEE27E /* etzamenmaikiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E14F7829F59A6800FEE27E /* etzamenmaikiApp.swift */; };
 		C9E14F7B29F59A6800FEE27E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E14F7A29F59A6800FEE27E /* ContentView.swift */; };
 		C9E14F7D29F59A6A00FEE27E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9E14F7C29F59A6A00FEE27E /* Assets.xcassets */; };
@@ -36,6 +46,16 @@
 		C971965429FC884F00DEB3A5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C971965629FC8A3600DEB3A5 /* Yuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yuser.swift; sourceTree = "<group>"; };
 		C971965829FC900E00DEB3A5 /* Produtz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Produtz.swift; sourceTree = "<group>"; };
+		C9CE6B652A1588210026003B /* ListaProd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProd.swift; sourceTree = "<group>"; };
+		C9CE6B672A1588350026003B /* ListaSal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaSal.swift; sourceTree = "<group>"; };
+		C9CE6B692A15884A0026003B /* ListaPur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPur.swift; sourceTree = "<group>"; };
+		C9CFF7D52A15924D00080D6C /* ListaUsr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaUsr.swift; sourceTree = "<group>"; };
+		C9D98D482A153AE8008A74DD /* Sales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sales.swift; sourceTree = "<group>"; };
+		C9D98D4A2A153AFB008A74DD /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		C9D98D4C2A153C59008A74DD /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		C9D98D4E2A154089008A74DD /* Textfield2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textfield2.swift; sourceTree = "<group>"; };
+		C9D98D502A154508008A74DD /* PassTextFiel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassTextFiel.swift; sourceTree = "<group>"; };
+		C9D98D522A154D39008A74DD /* RegisterPlus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlus.swift; sourceTree = "<group>"; };
 		C9E14F7529F59A6800FEE27E /* etzamenmaiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etzamenmaiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9E14F7829F59A6800FEE27E /* etzamenmaikiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = etzamenmaikiApp.swift; sourceTree = "<group>"; };
 		C9E14F7A29F59A6800FEE27E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,7 +63,7 @@
 		C9E14F7F29F59A6A00FEE27E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9E14F8A29F59CA300FEE27E /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTeisfil.swift; sourceTree = "<group>"; };
-		C9EAB6462A11D99700B740B1 /* AppTaruls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTaruls.swift; sourceTree = "<group>"; };
+		C9EAB6462A11D99700B740B1 /* AppTaruls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTaruls.swift; path = ../AppTaruls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +107,6 @@
 		C9E14F6C29F59A6800FEE27E = {
 			isa = PBXGroup;
 			children = (
-				C9EAB6462A11D99700B740B1 /* AppTaruls.swift */,
 				C9E14F7729F59A6800FEE27E /* etzamenmaiki */,
 				C9E14F7629F59A6800FEE27E /* Products */,
 			);
@@ -107,15 +126,26 @@
 				C90E65612A0F02A800FB0674 /* View */,
 				C90E655D2A0EFEEB00FB0674 /* Models */,
 				C90E65582A0EFE9900FB0674 /* ViewModels */,
-				C9E14F7829F59A6800FEE27E /* etzamenmaikiApp.swift */,
-				C9E14F8A29F59CA300FEE27E /* AppButton.swift */,
 				C9E14F7A29F59A6800FEE27E /* ContentView.swift */,
 				C971965429FC884F00DEB3A5 /* Menu.swift */,
-				C90E654F2A0EFD1100FB0674 /* GoogleService-Info.plist */,
+				C9D98D522A154D39008A74DD /* RegisterPlus.swift */,
 				C971965629FC8A3600DEB3A5 /* Yuser.swift */,
+				C9CFF7D52A15924D00080D6C /* ListaUsr.swift */,
 				C971965829FC900E00DEB3A5 /* Produtz.swift */,
-				C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */,
+				C9CE6B652A1588210026003B /* ListaProd.swift */,
+				C9D98D482A153AE8008A74DD /* Sales.swift */,
+				C9CE6B672A1588350026003B /* ListaSal.swift */,
+				C9D98D4A2A153AFB008A74DD /* Purchase.swift */,
+				C9CE6B692A15884A0026003B /* ListaPur.swift */,
+				C90E654F2A0EFD1100FB0674 /* GoogleService-Info.plist */,
+				C9E14F8A29F59CA300FEE27E /* AppButton.swift */,
 				C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */,
+				C9E14F7829F59A6800FEE27E /* etzamenmaikiApp.swift */,
+				C9EAB6462A11D99700B740B1 /* AppTaruls.swift */,
+				C9D98D4C2A153C59008A74DD /* AppLabel.swift */,
+				C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */,
+				C9D98D4E2A154089008A74DD /* Textfield2.swift */,
+				C9D98D502A154508008A74DD /* PassTextFiel.swift */,
 				C9E14F7C29F59A6A00FEE27E /* Assets.xcassets */,
 				C9E14F7E29F59A6A00FEE27E /* Preview Content */,
 			);
@@ -210,15 +240,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9E14F8D29F59D1700FEE27E /* AppTeisfil.swift in Sources */,
+				C9CE6B6A2A15884A0026003B /* ListaPur.swift in Sources */,
 				C971965329FC879A00DEB3A5 /* AppSicreTeisfil.swift in Sources */,
 				C90E655F2A0EFEEB00FB0674 /* Producto.swift in Sources */,
 				C971965929FC900E00DEB3A5 /* Produtz.swift in Sources */,
 				C971965529FC884F00DEB3A5 /* Menu.swift in Sources */,
 				C90E655C2A0EFE9900FB0674 /* ProductosViewModel.swift in Sources */,
+				C9D98D4F2A154089008A74DD /* Textfield2.swift in Sources */,
+				C9D98D4B2A153AFB008A74DD /* Purchase.swift in Sources */,
 				C9EAB6472A11D99700B740B1 /* AppTaruls.swift in Sources */,
+				C9CE6B682A1588350026003B /* ListaSal.swift in Sources */,
+				C9D98D512A154508008A74DD /* PassTextFiel.swift in Sources */,
+				C9CFF7D62A15924D00080D6C /* ListaUsr.swift in Sources */,
+				C9D98D532A154D39008A74DD /* RegisterPlus.swift in Sources */,
 				C90E655B2A0EFE9900FB0674 /* ProductoViewModels.swift in Sources */,
 				C9E14F7B29F59A6800FEE27E /* ContentView.swift in Sources */,
+				C9D98D4D2A153C59008A74DD /* AppLabel.swift in Sources */,
 				C9E14F7929F59A6800FEE27E /* etzamenmaikiApp.swift in Sources */,
+				C9CE6B662A1588210026003B /* ListaProd.swift in Sources */,
+				C9D98D492A153AE8008A74DD /* Sales.swift in Sources */,
 				C971965729FC8A3600DEB3A5 /* Yuser.swift in Sources */,
 				C9E14F8B29F59CA300FEE27E /* AppButton.swift in Sources */,
 			);

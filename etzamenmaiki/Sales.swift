@@ -1,13 +1,13 @@
 //
-//  Produtz.swift
+//  Sales.swift
 //  etzamenmaiki
 //
-//  Created by ISSC_612_2023 on 28/04/23.
+//  Created by ISSC_612_2023 on 17/05/23.
 //
 
 import SwiftUI
 
-struct Produtz: View {
+struct Sales: View {
     var body: some View {
         NavigationView{
             
@@ -17,7 +17,7 @@ struct Produtz: View {
                     
                     VStack{}.frame(height: CGFloat(30))
                     
-                    AppTaruls(title: "Products")
+                    AppTaruls(title: "Sales")
                     
                     
                 }.frame(maxHeight: .infinity,alignment: .topTrailing)
@@ -26,30 +26,33 @@ struct Produtz: View {
                     VStack{}.frame(height: CGFloat(50))
                     Group{
                         VStack{
-                            AppLabel(title: "ID")
-                            Textfield2(hint: "ID")}
+                            AppLabel(title: "IDProduct")
+                            Textfield2(hint: "IDProduct")}
                         VStack{
                             AppLabel(title: "Name")
                             Textfield2(hint: "Name")}
                         VStack{
-                            AppLabel(title: "Description")
-                            Textfield2(hint: "Description")}
+                            AppLabel(title: "Quantity")
+                            Textfield2(hint: "Quantity")}
                     }
                     VStack{
-                        AppLabel(title: "Units")
-                        Textfield2(hint: "Units")}
+                        AppLabel(title: "Sale ID")
+                        Textfield2(hint: "Sale ID")}
                     VStack{
-                        AppLabel(title: "Cost")
-                        Textfield2(hint: "Cost")}
+                        AppLabel(title: "Purchase ID")
+                        Textfield2(hint: "Purchase ID")}
                     VStack{
-                        AppLabel(title: "Price")
-                        Textfield2(hint: "Price")}
+                        AppLabel(title: "Pieces")
+                        Textfield2(hint: "Pieces")}
                     VStack{
-                        AppLabel(title: "Utility")
-                        Textfield2(hint: "Utility")}
+                        AppLabel(title: "Subtotal")
+                        Textfield2(hint: "Subtotal")}
+                    VStack{
+                        AppLabel(title: "Total")
+                        Textfield2(hint: "Total")}
                         VStack{}.frame(height: CGFloat(40))
                     
-                    AppButton(title: "Register", onClick: {
+                    AppButton(title: "Send Sale", onClick: {
                         //NavigationLink(<#T##titleKey: LocalizedStringKey##LocalizedStringKey#>, value: <#T##Hashable?#>)
                     })
                     
@@ -59,8 +62,8 @@ struct Produtz: View {
     }
 }
 
-struct Produtz_Previews: PreviewProvider {
+struct Sales_Previews: PreviewProvider {
     static var previews: some View {
-        Produtz()
+        Sales()
     }
 }
