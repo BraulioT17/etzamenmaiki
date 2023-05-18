@@ -10,7 +10,7 @@ import SwiftUI
 struct Purchase: View {
     @State var buttonClick = false
     var body: some View {
-        NavigationView{
+        NavigationStack{
             
             ZStack{
                 ScrollView{

@@ -24,6 +24,7 @@ struct RegisterPlus: View {
                     
                     
                 }.frame(maxHeight: .infinity,alignment: .topTrailing)
+                
                 VStack (spacing:50){
                     Image(systemName: "plus.viewfinder").font(.system(size: 90.0))
                     VStack{}.frame(height: CGFloat(5))
@@ -37,7 +38,7 @@ struct RegisterPlus: View {
                 }.frame(maxHeight: .infinity)
                 
                 NavigationLink(destination: Yuser(), isActive: $buttonClickUsr, label: {EmptyView()})
-                NavigationLink(destination: Produtz(), isActive: $buttonClickProd, label: {EmptyView()})                    .navigationBarBackButtonHidden(true)
+                NavigationLink(destination: Produtz(), isActive: $buttonClickProd, label: {EmptyView()})                 .navigationBarBackButtonHidden(true)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading){
                             Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})

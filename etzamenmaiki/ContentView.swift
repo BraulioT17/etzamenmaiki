@@ -38,7 +38,7 @@ struct ContentView: View {
                 
                 NavigationLink(destination: Menu(), isActive: $buttonClickLog, label: {EmptyView()}).toolbarRole(.editor)
                 
-            }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:1,green:0.88,blue:0.88,opacity: 1))
+            }.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
                 
             
         }

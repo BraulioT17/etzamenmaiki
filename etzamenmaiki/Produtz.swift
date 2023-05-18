@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Produtz: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.presentationMode) private var presentationMode
     var body: some View {
         NavigationView{
             
@@ -52,7 +54,12 @@ struct Produtz: View {
                     AppButton(title: "Register", onClick: {
                         //NavigationLink(<#T##titleKey: LocalizedStringKey##LocalizedStringKey#>, value: <#T##Hashable?#>)
                     })
-                    
+                    .navigationBarBackButtonHidden(true)
+                        .toolbar(content: {
+                            ToolbarItem(placement: .navigationBarLeading){
+                                Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})
+                            }
+                        })
                 }.frame(maxHeight: .infinity)}.frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .top).background(Color(red:1,green:0.88,blue:0.88,opacity: 1))
         }
         }
