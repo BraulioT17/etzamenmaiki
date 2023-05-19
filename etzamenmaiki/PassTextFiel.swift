@@ -14,7 +14,7 @@ struct PassTextFiel: View {
         func _body(configuration: TextField<Self._Label>) -> some View {
             configuration
                 .padding(10)
-                .background(LinearGradient(gradient: Gradient(colors: [Color.clear, Color.white]), startPoint: .trailing, endPoint: .leading))
+                .background(LinearGradient(gradient: Gradient(colors: [Color.white, Color.white]), startPoint: .trailing, endPoint: .leading))
                 .cornerRadius(20)
                 .shadow(color: .white, radius: 5)
         }

@@ -9,6 +9,7 @@ import SwiftUI
 //import SDWebImageSwiftUI
  
 struct UserDetailsView: View {
+    
    
   @Environment(\.presentationMode) var presentationMode
   @State var presentEditBookSheet = false
@@ -18,33 +19,34 @@ struct UserDetailsView: View {
    
   private func editButton(action: @escaping () -> Void) -> some View {
     Button(action: { action() }) {
-      Text("Edit")
-    }
+        Text("Edit").foregroundColor(Color.black)
+    }.foregroundColor(Color.black)
   }
    
   var body: some View {
+      
     Form {
-      Section(header: Text("User")) {
-        Text(user.nombre)
+      Section(header: AppLabel(title: "User")) {
+        Text(user.correo)
         Text("\(user.edad) year(s)")
       }
        
-      Section(header: Text("Name")) {
+      Section(header: AppLabel(title: "Name")) {
         Text(user.nombre)
       }
-        Section(header: Text("Lastname")) {
+        Section(header: AppLabel(title: "Lastname")) {
           Text(user.apellido)
         }
-        Section(header: Text("Email")) {
-          Text(user.correo)
-        }
-        Section(header: Text("Gender")) {
+        Section(header: AppLabel(title: "Gender")) {
           Text(user.genero)
         }
       //Section(header: Text("Photo")) {
           //AnimatedImage(url: URL(string: book.image)!).resizable().frame(width: 300, height: 300)
       //}
-    }
+    }.scrollContentBackground(.hidden)
+          .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
+      // Establecer el color rojo como fondo del formulario
+          .foregroundColor(Color.black)
     .navigationBarTitle(user.nombre)
     .navigationBarItems(trailing: editButton {
       self.presentEditBookSheet.toggle()
@@ -68,7 +70,7 @@ struct UserDetailsView: View {
  
 struct UserDetailsView_Previews: PreviewProvider {
   static var previews: some View {
-      let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: "23", genero: "photo1", nombre: "")
+      let user = UserModel(apellido: "Uribe", correo: "alessia@hols.com", edad: "23", genero: "femenino", nombre: "Alessia")
     return
       NavigationView {
         UserDetailsView(user: user)
