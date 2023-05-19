@@ -9,7 +9,7 @@ class UserViewModel: ObservableObject {
    
   private var cancellables = Set<AnyCancellable>()
    
-    init(userModel: UserModel = UserModel(apellido: "", correo: "", edad: 0, genero: "", nombre: "")) {
+    init(userModel: UserModel = UserModel(apellido: "", correo: "", edad: "", genero: "", nombre: "")) {
     self.userModel = userModel
      
     self.$userModel

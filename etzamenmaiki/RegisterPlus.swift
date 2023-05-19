@@ -37,7 +37,7 @@ struct RegisterPlus: View {
                     
                 }.frame(maxHeight: .infinity)
                 
-                NavigationLink(destination: Yuser(), isActive: $buttonClickUsr, label: {EmptyView()})
+                NavigationLink(destination: UsersView(), isActive: $buttonClickUsr, label: {EmptyView()})
                 NavigationLink(destination: Produtz(), isActive: $buttonClickProd, label: {EmptyView()})                 .navigationBarBackButtonHidden(true)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading){

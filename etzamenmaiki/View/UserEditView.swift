@@ -51,7 +51,7 @@ struct UserEditView: View {
         }
           
           Section(header: Text("Age")) {
-              TextField("Age", value: $viewModel.userModel.numberOfPages, formatter: NumberFormatter())
+              TextField("Age", value: $viewModel.userModel.edad, formatter: NumberFormatter())
           }
          
         Section(header: Text("Name")) {
@@ -66,9 +66,9 @@ struct UserEditView: View {
             TextField("Gender", text: $viewModel.userModel.genero)
           }
  
-        Section(header: Text("Photo")) {
-            TextField("Image", text: $viewModel.userModel.image)
-        }
+        //Section(header: Text("Photo")) {
+            //TextField("Image", text: $viewModel.userModel.image)
+        //}
            
         if mode == .edit {
           Section {
@@ -116,8 +116,9 @@ struct UserEditView: View {
  
 struct UserEditView_Previews: PreviewProvider {
   static var previews: some View {
-    let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: 89, genero: "photo1", nombre: "")
+    let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: "89", genero: "photo1", nombre: "")
     let userViewModel = UserViewModel(userModel: user)
     return UserEditView(viewModel: userViewModel, mode: .edit)
   }
 }
+

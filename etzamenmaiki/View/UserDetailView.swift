@@ -68,7 +68,7 @@ struct UserDetailsView: View {
  
 struct UserDetailsView_Previews: PreviewProvider {
   static var previews: some View {
-      let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: 23, genero: "photo1", nombre: "")
+      let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: "23", genero: "photo1", nombre: "")
     return
       NavigationView {
         UserDetailsView(user: user)
