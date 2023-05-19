@@ -18,31 +18,33 @@ struct ProductDetailsView: View {
    
   private func editButton(action: @escaping () -> Void) -> some View {
     Button(action: { action() }) {
-      Text("Edit")
+        Text("Edit").foregroundColor(Color.black)
     }
   }
    
   var body: some View {
     Form {
-      Section(header: Text("Product")) {
+      Section(header: AppLabel(title: "Product")) {
         Text(product.nombre)
         Text(" $\(product.precio)")
       }
        
-      Section(header: Text("Description")) {
+      Section(header: AppLabel(title: "Description")) {
         Text(product.descripcion)
       }
-        Section(header: Text("Inversion")) {
+        Section(header: AppLabel(title: "Investment")) {
           Text(product.algo)
         }
-        Section(header: Text("Utility")) {
+        Section(header: AppLabel(title: "Utility")) {
           Text(product.utilidad)
         }
-        Section(header: Text("Existency")) {
+        Section(header: AppLabel(title: "Existency")) {
           Text(product.algo2)
         }
       
     }
+    .scrollContentBackground(.hidden)
+    .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
     .navigationBarTitle(product.nombre)
     .navigationBarItems(trailing: editButton {
       self.presentEditBookSheet.toggle()

@@ -15,7 +15,7 @@ struct SalesView: View {
     
     private var addButton: some View {
         Button(action: { self.presentAddBookSheet.toggle() }) {
-            Image(systemName: "plus")
+            Image(systemName: "plus").foregroundColor(Color.black)
         }
     }
     
@@ -38,15 +38,25 @@ struct SalesView: View {
             ZStack {
                 NavigationView {
                     List {
-                        ForEach(viewModel.sales) { sale in
-                            saleRowView(sale: sale)
-                        }
-                        .onDelete() { indexSet in
-                            viewModel.removeSales(atOffsets: indexSet)
-                        }
+                        Section{
+                            ForEach(viewModel.sales) { sale in
+                                saleRowView(sale: sale)
+                            }
+                            .onDelete() { indexSet in
+                                viewModel.removeSales(atOffsets: indexSet)
+                            }.listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                                .listRowBackground(Capsule()
+                                  .fill(Color(white: 1)).padding(1))
+                                .padding(.vertical, 15)
+                                  .headerProminence(.increased)
+                        }header: {
+                            AppTaruls(title: "Sale").bold()
+                            VStack{}.frame(height: CGFloat(55))
+                        }.listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                     }
-                    .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .navigationTitle("Sale")
+                    
+                    .scrollContentBackground(.hidden)
+                    .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
                     .navigationBarItems(trailing: addButton)
                     .onAppear() {
                         print("BooksListView appears. Subscribing to data updates.")
@@ -57,9 +67,7 @@ struct SalesView: View {
                         SaleEditView()
                     }
                     // Ajustar los márgenes del NavigationView
-                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 80, trailing: 10))
-                    .clipShape(RoundedRectangle(cornerRadius: 50))
-                .background(Color.clear)
+                }
             
         }
         .background(Color(red: 10, green: 0.88, blue: 0.88, opacity: 1))

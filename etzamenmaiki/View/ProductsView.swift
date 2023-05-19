@@ -15,7 +15,7 @@ struct ProductsView: View {
     
     private var addButton: some View {
         Button(action: { self.presentAddBookSheet.toggle() }) {
-            Image(systemName: "plus")
+            Image(systemName: "plus").foregroundColor(Color.black)
         }
     }
     
@@ -38,15 +38,24 @@ struct ProductsView: View {
             ZStack {
                 NavigationView {
                     List {
-                        ForEach(viewModel.products) { product in
-                            productRowView(product: product)
-                        }
-                        .onDelete() { indexSet in
-                            viewModel.removeProducts(atOffsets: indexSet)
-                        }
+                        Section{
+                            ForEach(viewModel.products) { product in
+                                productRowView(product: product)
+                            }
+                            .onDelete() { indexSet in
+                                viewModel.removeProducts(atOffsets: indexSet)
+                            }
+                                .listRowBackground(Capsule()
+                                  .fill(Color(white: 1)).padding(1))
+                                .padding(.vertical, 15)
+                                  .headerProminence(.increased)
+                        }header: {
+                            AppTaruls(title: "Product").bold()
+                            VStack{}.frame(height: CGFloat(55))
+                        }.listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
                     }
-                    .listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
-                    .navigationTitle("Product")
+                    .scrollContentBackground(.hidden)
+                    .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
                     .navigationBarItems(trailing: addButton)
                     .onAppear() {
                         print("BooksListView appears. Subscribing to data updates.")
@@ -57,9 +66,7 @@ struct ProductsView: View {
                         ProductEditView()
                     }
                     // Ajustar los márgenes del NavigationView
-                }.padding(EdgeInsets(top: 10, leading: 10, bottom: 80, trailing: 10))
-                    .clipShape(RoundedRectangle(cornerRadius: 50))
-                .background(Color.clear)
+                }
             
         }
         .background(Color(red: 10, green: 0.88, blue: 0.88, opacity: 1))

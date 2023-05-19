@@ -1,5 +1,5 @@
 //
-//  SaleEditView.swift
+//  PurchaseEditView.swift
 //  etzamenmaiki
 //
 //  Created by ISSC_612_2023 on 17/05/23.
@@ -7,26 +7,26 @@
 
 import SwiftUI
  
-enum ModeSale {
+enum ModePurchase {
   case new
   case edit
 }
  
-enum ActionSale {
+enum ActionPurchase {
   case delete
   case done
   case cancel
 }
  
-struct SaleEditView: View {
+struct PurchaseEditView: View {
    
   @Environment(\.presentationMode) private var presentationMode
   @State var presentActionSheet = false
  
    
-  @ObservedObject var viewModel = SaleViewModel()
-  var mode: ModeSale = .new
-  var completionHandler: ((Result<ActionSale, Error>) -> Void)?
+  @ObservedObject var viewModel = PurchaseViewModel()
+  var mode: ModePurchase = .new
+  var completionHandler: ((Result<ActionPurchase, Error>) -> Void)?
    
    
   var cancelButton: some View {
@@ -37,48 +37,40 @@ struct SaleEditView: View {
    
   var saveButton: some View {
     Button(action: { self.handleDoneTapped() }) {
-      Text(mode == .new ? "Done" : "Save").foregroundColor(Color.black)
-    }
+      Text(mode == .new ? "Done" : "Save")
+    }.foregroundColor(Color.black)
     .disabled(!viewModel.modified)
   }
    
   var body: some View {
     NavigationView {
-      Form{
-        Section(header: AppLabel(title: "Sale")) {
-          TextField("idCliente", value: $viewModel.sale.idCliente, formatter: NumberFormatter())
-        }
+        Form{
+        Section(header: AppLabel(title: "Purchase")) {
+          TextField("Name", text: $viewModel.purchase.nombre)
           
-          Section(header: AppLabel(title: "IDProduct")) {
-              TextField("idProducto", value: $viewModel.sale.idProducto, formatter: NumberFormatter())
-          }
-         
-        Section(header: AppLabel(title: "IDSalesMan")) {
-          TextField("idVendedor", value: $viewModel.sale.idVendedor, formatter: NumberFormatter())
         }
+            Section(header: AppLabel(title: "IdProduct")) {
+                TextField("IdProduct", value: $viewModel.purchase.idProducto, formatter: NumberFormatter())
+            }
           
           Section(header: AppLabel(title: "Pieces")) {
-            TextField("Piezas", value: $viewModel.sale.piezas, formatter: NumberFormatter())
+              TextField("Pieces", value: $viewModel.purchase.piezas, formatter: NumberFormatter())
           }
-          
-          Section(header: AppLabel(title: "Subtotal")) {
-            TextField("subTotal", value: $viewModel.sale.subTotal, formatter: NumberFormatter())
-          }
-          
-          Section(header: AppLabel(title: "Total")) {
-            TextField("Total", value: $viewModel.sale.total, formatter: NumberFormatter())
-          }
+ 
+            Section(header: AppLabel(title: "IDA")) {
+                TextField("IDA", value: $viewModel.purchase.ida, formatter: NumberFormatter())
+            }
            
         if mode == .edit {
           Section {
-            Button("Delete sale") { self.presentActionSheet.toggle() }
+            Button("Delete purchase") { self.presentActionSheet.toggle() }
               .foregroundColor(.red)
               .fontWeight(.bold)
           }
         }
       }.scrollContentBackground(.hidden)
             .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
-      .navigationTitle(mode == .new ? "New sale" : viewModel.sale.total)
+      .navigationTitle(mode == .new ? "New purchase" : viewModel.purchase.nombre)
       .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
       .navigationBarItems(
         leading: cancelButton,
@@ -87,7 +79,7 @@ struct SaleEditView: View {
       .actionSheet(isPresented: $presentActionSheet) {
           ActionSheet(title: Text("Are you sure?"),
                       buttons: [
-                        .destructive(Text("Delete sale"),
+                        .destructive(Text("Delete purchase"),
                                      action: { self.handleDeleteTapped() }),
                         .cancel()
                       ])
@@ -115,11 +107,11 @@ struct SaleEditView: View {
   }
 }
  
-struct SaleEditView_Previews: PreviewProvider {
+struct PurchaseEditView_Previews: PreviewProvider {
   static var previews: some View {
-    let sale = Sale(idCliente: "", idProducto: "", idVendedor: "", piezas: "", subTotal: "", total: "")
-    let saleViewModel = SaleViewModel(sale: sale)
-    return SaleEditView(viewModel: saleViewModel, mode: .edit)
+    let purchase = Purcahse(idProducto: "", nombre: "", piezas: "", ida: "")
+    let purchaseViewModel = PurchaseViewModel(purchase: purchase)
+    return PurchaseEditView(viewModel: purchaseViewModel, mode: .edit)
   }
 }
 

@@ -38,7 +38,7 @@ struct RegisterPlus: View {
                 }.frame(maxHeight: .infinity)
                 
                 NavigationLink(destination: UsersView(), isActive: $buttonClickUsr, label: {EmptyView()})
-                NavigationLink(destination: Produtz(), isActive: $buttonClickProd, label: {EmptyView()})                 .navigationBarBackButtonHidden(true)
+                NavigationLink(destination: ProductsView(), isActive: $buttonClickProd, label: {EmptyView()})                 .navigationBarBackButtonHidden(true)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading){
                             Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})

@@ -31,13 +31,13 @@ struct ProductEditView: View {
    
   var cancelButton: some View {
     Button(action: { self.handleCancelTapped() }) {
-      Text("Cancel")
+        Text("Cancel").foregroundColor(Color.black)
     }
   }
    
   var saveButton: some View {
     Button(action: { self.handleDoneTapped() }) {
-      Text(mode == .new ? "Done" : "Save")
+        Text(mode == .new ? "Done" : "Save").foregroundColor(Color.black)
     }
     .disabled(!viewModel.modified)
   }
@@ -45,27 +45,27 @@ struct ProductEditView: View {
   var body: some View {
     NavigationView {
       Form{
-        Section(header: Text("Product")) {
+        Section(header: AppLabel(title: "Product")) {
           TextField("Name", text: $viewModel.product.nombre)
         }
           
-          Section(header: Text("Description")) {
+          Section(header: AppLabel(title: "Description")) {
             TextField("Description", text: $viewModel.product.descripcion)
           }
           
-          Section(header: Text("Price")) {
+          Section(header: AppLabel(title: "Price")) {
               TextField("Price", value: $viewModel.product.precio, formatter: NumberFormatter())
           }
           
-          Section(header: Text("Inversion")) {
+          Section(header: AppLabel(title: "Investment")) {
               TextField("Inversion", value: $viewModel.product.algo, formatter: NumberFormatter())
           }
           
-          Section(header: Text("Utility")) {
+          Section(header: AppLabel(title: "Utility")) {
               TextField("Utility", value: $viewModel.product.utilidad, formatter: NumberFormatter())
           }
           
-          Section(header: Text("Existency")) {
+          Section(header: AppLabel(title: "Existency")) {
               TextField("Existency", value: $viewModel.product.algo2, formatter: NumberFormatter())
           }
            
@@ -73,9 +73,12 @@ struct ProductEditView: View {
           Section {
             Button("Delete product") { self.presentActionSheet.toggle() }
               .foregroundColor(.red)
+              .fontWeight(.bold)
           }
         }
       }
+      .scrollContentBackground(.hidden)
+      .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
       .navigationTitle(mode == .new ? "New product" : viewModel.product.nombre)
       .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
       .navigationBarItems(

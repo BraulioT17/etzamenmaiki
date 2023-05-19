@@ -44,8 +44,8 @@ struct Menu: View {
                 }.frame(maxHeight: .infinity)
                 
                 NavigationLink(destination: RegisterPlus(), isActive: $buttonClickReg, label: {EmptyView()})
-                NavigationLink(destination: Sales(), isActive: $buttonClickSal, label: {EmptyView()})
-                NavigationLink(destination: Purchase(), isActive: $buttonClickPur, label: {EmptyView()})
+                NavigationLink(destination: SalesView(), isActive: $buttonClickSal, label: {EmptyView()})
+                NavigationLink(destination: PurchasesView(), isActive: $buttonClickPur, label: {EmptyView()})
                     .navigationBarBackButtonHidden(true)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigationBarLeading){
