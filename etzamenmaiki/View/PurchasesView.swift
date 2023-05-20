@@ -10,6 +10,7 @@ import Firebase
 //import SDWebImageSwiftUI
  
 struct PurchasesView: View {
+    @Environment(\.presentationMode) var presentationMode
     
     init(){
         UITableView.appearance().backgroundColor = .clear
@@ -20,7 +21,7 @@ struct PurchasesView: View {
      
     private var addButton: some View {
       Button(action: { self.presentAddBookSheet.toggle() }) {
-        Image(systemName: "plus")
+          Image(systemName: "cart.badge.plus").font(.system(size: 20.0)).fontWeight(.bold)
       }
     }
      
@@ -41,7 +42,7 @@ struct PurchasesView: View {
     }
      
     var body: some View {
-      NavigationView {
+      NavigationStack {
               List {
                   Section{
                       ForEach (viewModel.purchases) { purchase in
@@ -51,12 +52,15 @@ struct PurchasesView: View {
                           viewModel.removePurchases(atOffsets: indexSet)
                       }.listRowSeparator(.hidden)
                           .listRowBackground(Capsule()
-                            .fill(Color(white: 1)).padding(1))
+                            .fill(Color(white: 1)).padding(4))
                           .padding(.vertical, 15)
                             .headerProminence(.increased)
                             
                   }header: {
-                      AppTaruls(title: "Purchases").bold()
+                      HStack{
+                          AppTaruls(title: "Buy").bold()
+                          Image(systemName: "cart").font(.system(size: 20.0))
+                      }
                       VStack{}.frame(height: CGFloat(55))
                   }.listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                       
@@ -65,8 +69,12 @@ struct PurchasesView: View {
           
         .scrollContentBackground(.hidden)
         .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
-        
-          
+        .navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarLeading){
+                Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})
+            }
+        })
         .navigationBarItems(trailing: addButton).foregroundColor(Color.black)
         .onAppear() {
           print("BooksListView appears. Subscribing to data updates.")

@@ -12,10 +12,11 @@ import Firebase
 struct ProductsView: View {
     @StateObject var viewModel = ProductsViewModel()
     @State var presentAddBookSheet = false
+    @Environment(\.presentationMode) var presentationMode
     
     private var addButton: some View {
         Button(action: { self.presentAddBookSheet.toggle() }) {
-            Image(systemName: "plus").foregroundColor(Color.black)
+            Image(systemName: "note.text.badge.plus").font(.system(size: 20.0)).fontWeight(.bold).foregroundColor(Color.black)
         }
     }
     
@@ -36,7 +37,7 @@ struct ProductsView: View {
     var body: some View {
 
             ZStack {
-                NavigationView {
+                NavigationStack {
                     List {
                         Section{
                             ForEach(viewModel.products) { product in
@@ -45,17 +46,29 @@ struct ProductsView: View {
                             .onDelete() { indexSet in
                                 viewModel.removeProducts(atOffsets: indexSet)
                             }
+                            .listRowSeparator(.hidden)
                                 .listRowBackground(Capsule()
-                                  .fill(Color(white: 1)).padding(1))
+                                  .fill(Color(white: 1)).padding(4))
                                 .padding(.vertical, 15)
                                   .headerProminence(.increased)
+                            
                         }header: {
-                            AppTaruls(title: "Product").bold()
+                            HStack{
+                                AppTaruls(title: "Product").bold()
+                                Image(systemName: "note.text").font(.system(size: 20.0))
+                            }
                             VStack{}.frame(height: CGFloat(55))
-                        }.listRowInsets(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
+                        }.listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                     }
                     .scrollContentBackground(.hidden)
                     .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigationBarLeading){
+                            Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})
+                        }
+                    })
+                    .navigationBarBackButtonHidden(true)
                     .navigationBarItems(trailing: addButton)
                     .onAppear() {
                         print("BooksListView appears. Subscribing to data updates.")

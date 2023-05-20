@@ -54,19 +54,19 @@ struct ProductEditView: View {
           }
           
           Section(header: AppLabel(title: "Price")) {
-              TextField("Price", value: $viewModel.product.precio, formatter: NumberFormatter())
+              TextField("Price", text: $viewModel.product.precio)
           }
           
           Section(header: AppLabel(title: "Investment")) {
-              TextField("Inversion", value: $viewModel.product.algo, formatter: NumberFormatter())
+              TextField("Inversion", text: $viewModel.product.algo)
           }
           
           Section(header: AppLabel(title: "Utility")) {
-              TextField("Utility", value: $viewModel.product.utilidad, formatter: NumberFormatter())
+              TextField("Utility", text: $viewModel.product.utilidad)
           }
           
           Section(header: AppLabel(title: "Existency")) {
-              TextField("Existency", value: $viewModel.product.algo2, formatter: NumberFormatter())
+              TextField("Existency", text: $viewModel.product.algo2)
           }
            
         if mode == .edit {

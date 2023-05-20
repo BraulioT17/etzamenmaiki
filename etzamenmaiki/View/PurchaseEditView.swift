@@ -50,15 +50,15 @@ struct PurchaseEditView: View {
           
         }
             Section(header: AppLabel(title: "IdProduct")) {
-                TextField("IdProduct", value: $viewModel.purchase.idProducto, formatter: NumberFormatter())
+                TextField("IdProduct", text: $viewModel.purchase.idProducto)
             }
           
           Section(header: AppLabel(title: "Pieces")) {
-              TextField("Pieces", value: $viewModel.purchase.piezas, formatter: NumberFormatter())
+              TextField("Pieces", text: $viewModel.purchase.piezas)
           }
  
             Section(header: AppLabel(title: "IDA")) {
-                TextField("IDA", value: $viewModel.purchase.ida, formatter: NumberFormatter())
+                TextField("IDA", text: $viewModel.purchase.ida)
             }
            
         if mode == .edit {

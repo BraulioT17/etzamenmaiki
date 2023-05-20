@@ -51,7 +51,7 @@ struct UserEditView: View {
         }
           
           Section(header: AppLabel(title: "Age")) {
-              TextField("Age", value: $viewModel.userModel.edad, formatter: NumberFormatter())
+              TextField("Age", text: $viewModel.userModel.edad)
           }
          
           Section(header: AppLabel(title: "Name")) {
@@ -118,7 +118,7 @@ struct UserEditView: View {
  
 struct UserEditView_Previews: PreviewProvider {
   static var previews: some View {
-    let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: "89", genero: "photo1", nombre: "")
+      let user = UserModel(apellido: "Coder", correo: "Cairocoders", edad: "89", genero: "photo1", nombre: "")
     let userViewModel = UserViewModel(userModel: user)
     return UserEditView(viewModel: userViewModel, mode: .edit)
   }

@@ -11,18 +11,24 @@ struct ContentView: View {
     @State var buttonClickLog = false
     var body: some View {
         NavigationStack{
+            
             ZStack{
                 
                 
                 VStack{
                     
-                    VStack{}.frame(height: CGFloat(25))
+                    VStack{}.frame(height: CGFloat(10))
                     
-                    AppTaruls(title: "Login")
+                    AppTituls(title: "Login")
+                    VStack{}.frame(height: CGFloat(5))
                     
+                    Image(systemName: "person.crop.circle").font(.system(size: 100.0)).foregroundColor(Color.black)
+                    
+                    VStack{}.frame(height: CGFloat(90))
                     
                 }.frame(maxHeight: .infinity,alignment: .topTrailing)
-                VStack (spacing:20){
+                VStack{}.frame(height: CGFloat(90))
+                VStack (spacing:8){
                     AppTaruls(title: "User")
                     
                     Textfield2(hint: "Usuario")
@@ -34,6 +40,7 @@ struct ContentView: View {
                     })
                     
                     
+                    
                 }.frame(maxHeight: .infinity)
                 
                 NavigationLink(destination: Menu(), isActive: $buttonClickLog, label: {EmptyView()}).toolbarRole(.editor)
@@ -42,6 +49,7 @@ struct ContentView: View {
                 
             
         }
+        
         
         
 }

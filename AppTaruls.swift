@@ -10,7 +10,7 @@ import SwiftUI
 struct AppTaruls: View {
     let title: String
     var body: some View {
-        Text(title).font(.system(size: 20)).foregroundColor(.red).fontWeight(Font.Weight.thin).tracking(20).fontDesign(.serif)
+        Text(title).font(.system(size: 20)).foregroundColor(.red).tracking(20).fontDesign(.serif).fontWeight(.bold)
     }
 }
 

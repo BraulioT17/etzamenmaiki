@@ -24,7 +24,7 @@ class PurchaseViewModel: ObservableObject {
    
   private func addPurchase(_ purchase: Purcahse) {
     do {
-      let _ = try db.collection("ventas").addDocument(from: purchase) //no se como va aqui, tal vez falle
+      let _ = try db.collection("compras").addDocument(from: purchase) //no se como va aqui, tal vez falle
     }
     catch {
       print(error)
@@ -34,7 +34,7 @@ class PurchaseViewModel: ObservableObject {
   private func updatePurchase(_ purchase: Purcahse) {
     if let documentId = purchase.id {
       do {
-        try db.collection("ventas").document(documentId).setData(from: purchase)
+        try db.collection("compras").document(documentId).setData(from: purchase)
       }
       catch {
         print(error)
@@ -53,7 +53,7 @@ class PurchaseViewModel: ObservableObject {
    
   private func removePurchase() {
     if let documentId = purchase.id {
-      db.collection("ventas").document(documentId).delete { error in
+      db.collection("compras").document(documentId).delete { error in
         if let error = error {
           print(error.localizedDescription)
         }

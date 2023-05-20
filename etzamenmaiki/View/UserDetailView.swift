@@ -19,7 +19,7 @@ struct UserDetailsView: View {
    
   private func editButton(action: @escaping () -> Void) -> some View {
     Button(action: { action() }) {
-        Text("Edit").foregroundColor(Color.black)
+        Image(systemName: "square.and.pencil").font(.system(size: 20.0)).fontWeight(.bold)
     }.foregroundColor(Color.black)
   }
    
@@ -47,6 +47,12 @@ struct UserDetailsView: View {
           .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
       // Establecer el color rojo como fondo del formulario
           .foregroundColor(Color.black)
+          .navigationBarBackButtonHidden(true)
+          .toolbar(content: {
+              ToolbarItem(placement: .navigationBarLeading){
+                  Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.red).font(.system(size: 22))})
+              }
+          })
     .navigationBarTitle(user.nombre)
     .navigationBarItems(trailing: editButton {
       self.presentEditBookSheet.toggle()

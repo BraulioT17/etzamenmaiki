@@ -20,6 +20,7 @@
 		C96629532A183571004BB6E8 /* PurchaseEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96629502A183571004BB6E8 /* PurchaseEditView.swift */; };
 		C96629542A183571004BB6E8 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96629512A183571004BB6E8 /* PurchasesView.swift */; };
 		C96629552A183571004BB6E8 /* PurchaseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96629522A183571004BB6E8 /* PurchaseDetailView.swift */; };
+		C96629572A184BEF004BB6E8 /* AppTituls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96629562A184BEF004BB6E8 /* AppTituls.swift */; };
 		C971965329FC879A00DEB3A5 /* AppSicreTeisfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */; };
 		C971965529FC884F00DEB3A5 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965429FC884F00DEB3A5 /* Menu.swift */; };
 		C971965729FC8A3600DEB3A5 /* Yuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C971965629FC8A3600DEB3A5 /* Yuser.swift */; };
@@ -71,6 +72,7 @@
 		C96629502A183571004BB6E8 /* PurchaseEditView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseEditView.swift; sourceTree = "<group>"; };
 		C96629512A183571004BB6E8 /* PurchasesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
 		C96629522A183571004BB6E8 /* PurchaseDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseDetailView.swift; sourceTree = "<group>"; };
+		C96629562A184BEF004BB6E8 /* AppTituls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTituls.swift; sourceTree = "<group>"; };
 		C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSicreTeisfil.swift; sourceTree = "<group>"; };
 		C971965429FC884F00DEB3A5 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		C971965629FC8A3600DEB3A5 /* Yuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yuser.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				C971965229FC879A00DEB3A5 /* AppSicreTeisfil.swift */,
 				C9E14F7829F59A6800FEE27E /* etzamenmaikiApp.swift */,
 				C9EAB6462A11D99700B740B1 /* AppTaruls.swift */,
+				C96629562A184BEF004BB6E8 /* AppTituls.swift */,
 				C9D98D4C2A153C59008A74DD /* AppLabel.swift */,
 				C9E14F8C29F59D1700FEE27E /* AppTeisfil.swift */,
 				C9D98D4E2A154089008A74DD /* Textfield2.swift */,
@@ -334,6 +337,7 @@
 				C9DC57562A1806B20029932C /* ProductEditView.swift in Sources */,
 				C9CFF7D62A15924D00080D6C /* ListaUsr.swift in Sources */,
 				C9DC57602A1806CF0029932C /* ProductViewModel.swift in Sources */,
+				C96629572A184BEF004BB6E8 /* AppTituls.swift in Sources */,
 				C9D98D532A154D39008A74DD /* RegisterPlus.swift in Sources */,
 				C90E655B2A0EFE9900FB0674 /* ProductoViewModels.swift in Sources */,
 				C9DC57592A1806B20029932C /* SaleDetailView.swift in Sources */,

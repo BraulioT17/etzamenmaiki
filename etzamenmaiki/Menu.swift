@@ -21,16 +21,16 @@ struct Menu: View {
                 VStack{
                     
                     
-                    VStack{}.frame(height: CGFloat(25))
+                    VStack{}.frame(height: CGFloat(45))
                     
-                    AppTaruls(title: "Menu")
+                    AppTituls(title: "Options")
                     
                     
                 }.frame(maxHeight: .infinity,alignment: .topTrailing)
   
                 VStack (spacing:50){
                     
-                    Image(systemName: "menucard.fill").font(.system(size: 90.0))
+                    Image(systemName: "books.vertical").font(.system(size: 100.0))
                     AppButton(title: "Register", onClick: {
                         buttonClickReg = true
                     })

@@ -10,7 +10,7 @@ import Firebase
 //import SDWebImageSwiftUI
  
 struct UsersView: View {
-    
+    @Environment(\.presentationMode) private var presentationMode
     init(){
         UITableView.appearance().backgroundColor = .clear
     }
@@ -20,7 +20,7 @@ struct UsersView: View {
      
     private var addButton: some View {
       Button(action: { self.presentAddBookSheet.toggle() }) {
-        Image(systemName: "plus")
+          Image(systemName: "person.badge.plus").font(.system(size: 20.0)).fontWeight(.bold)
       }
     }
      
@@ -41,7 +41,7 @@ struct UsersView: View {
     }
      
     var body: some View {
-      NavigationView {
+      NavigationStack {
               List {
                   Section{
                       ForEach (viewModel.users) { userModel in
@@ -51,12 +51,15 @@ struct UsersView: View {
                           viewModel.removeUsers(atOffsets: indexSet)
                       }.listRowSeparator(.hidden)
                           .listRowBackground(Capsule()
-                            .fill(Color(white: 1)).padding(1))
+                            .fill(Color(white: 1)).padding(4))
                           .padding(.vertical, 15)
                             .headerProminence(.increased)
                             
                   }header: {
-                      AppTaruls(title: "Users").bold()
+                      HStack{
+                          AppTaruls(title: "Users").bold()
+                          Image(systemName: "person.3").font(.system(size: 20.0))
+                      }
                       VStack{}.frame(height: CGFloat(55))
                   }.listRowInsets(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
                       
@@ -66,6 +69,12 @@ struct UsersView: View {
         .scrollContentBackground(.hidden)
         .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
         
+        .navigationBarBackButtonHidden(true)
+        .toolbar(content: {
+            ToolbarItem(placement: .navigationBarLeading){
+                Button(action: {presentationMode.wrappedValue.dismiss()}, label: {Image(systemName: "arrow.uturn.backward.circle").foregroundColor(Color.black).font(.system(size: 22))})
+            }
+        })
           
         .navigationBarItems(trailing: addButton).foregroundColor(Color.black)
         .onAppear() {

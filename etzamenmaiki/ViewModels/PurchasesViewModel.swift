@@ -28,7 +28,7 @@ class PurchasesViewModel: ObservableObject {
    
   func subscribe() {
     if listenerRegistration == nil {
-      listenerRegistration = db.collection("ventas").addSnapshotListener { (querySnapshot, error) in
+      listenerRegistration = db.collection("compras").addSnapshotListener { (querySnapshot, error) in
         guard let documents = querySnapshot?.documents else {
           print("No documents")
           return
@@ -45,7 +45,7 @@ class PurchasesViewModel: ObservableObject {
     let purchases = indexSet.lazy.map { self.purchases[$0] }
     purchases.forEach { Purchase in
       if let documentId = Purchase.id {
-        db.collection("ventas").document(documentId).delete { error in
+        db.collection("compras").document(documentId).delete { error in
           if let error = error {
             print("Unable to remove document: \(error.localizedDescription)")
           }

@@ -18,15 +18,15 @@ struct RegisterPlus: View {
                 
                 VStack{
                     
-                    VStack{}.frame(height: CGFloat(25))
+                    VStack{}.frame(height: CGFloat(45))
                     
-                    AppTaruls(title: "Register")
+                    AppTituls(title: "Register")
                     
                     
                 }.frame(maxHeight: .infinity,alignment: .topTrailing)
                 
                 VStack (spacing:50){
-                    Image(systemName: "plus.viewfinder").font(.system(size: 90.0))
+                    Image(systemName: "doc.badge.plus").font(.system(size: 90.0))
                     VStack{}.frame(height: CGFloat(5))
                     AppButton(title: "User", onClick: {
                         buttonClickUsr = true

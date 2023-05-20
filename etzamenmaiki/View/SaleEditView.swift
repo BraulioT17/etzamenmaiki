@@ -43,30 +43,30 @@ struct SaleEditView: View {
   }
    
   var body: some View {
-    NavigationView {
+    NavigationStack {
       Form{
         Section(header: AppLabel(title: "Sale")) {
-          TextField("idCliente", value: $viewModel.sale.idCliente, formatter: NumberFormatter())
+          TextField("idCliente", text: $viewModel.sale.idCliente)
         }
           
           Section(header: AppLabel(title: "IDProduct")) {
-              TextField("idProducto", value: $viewModel.sale.idProducto, formatter: NumberFormatter())
+              TextField("idProducto", text: $viewModel.sale.idProducto)
           }
          
         Section(header: AppLabel(title: "IDSalesMan")) {
-          TextField("idVendedor", value: $viewModel.sale.idVendedor, formatter: NumberFormatter())
+          TextField("idVendedor", text: $viewModel.sale.idVendedor)
         }
           
           Section(header: AppLabel(title: "Pieces")) {
-            TextField("Piezas", value: $viewModel.sale.piezas, formatter: NumberFormatter())
+            TextField("Piezas", text: $viewModel.sale.piezas)
           }
           
           Section(header: AppLabel(title: "Subtotal")) {
-            TextField("subTotal", value: $viewModel.sale.subTotal, formatter: NumberFormatter())
+            TextField("subTotal", text: $viewModel.sale.subTotal)
           }
           
           Section(header: AppLabel(title: "Total")) {
-            TextField("Total", value: $viewModel.sale.total, formatter: NumberFormatter())
+            TextField("Total", text: $viewModel.sale.total)
           }
            
         if mode == .edit {
@@ -78,6 +78,8 @@ struct SaleEditView: View {
         }
       }.scrollContentBackground(.hidden)
             .background(Color(red:10,green:0.88,blue:0.88,opacity: 1))
+            .navigationBarBackButtonHidden(true)
+        
       .navigationTitle(mode == .new ? "New sale" : viewModel.sale.total)
       .navigationBarTitleDisplayMode(mode == .new ? .inline : .large)
       .navigationBarItems(

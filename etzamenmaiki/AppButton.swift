@@ -16,7 +16,7 @@ struct AppButton: View {
             Button{
                 onClick()
             }label: {
-                Text(title).buttonStyle(.borderedProminent).frame(minWidth:.Magnitude(200),maxWidth: .Magnitude(200)).padding().background(Color(.white)).clipShape(Capsule()).foregroundColor(Color(.red)).shadow(radius: .Magnitude(5),y: 5)
+                Text(title).buttonStyle(.borderedProminent).frame(minWidth:.Magnitude(200),maxWidth: .Magnitude(200)).padding().background(Color(.white)).clipShape(Capsule()).foregroundColor(Color(.black)).shadow(radius: .Magnitude(5),y: 5)
             }
         }
     }
